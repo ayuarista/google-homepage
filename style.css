@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    height: 100%;
 }
 
 body {
@@ -24,6 +30,7 @@ nav {
 }
 
 nav a {
+    font-family: 'Roboto', sans-serif;
     color: black;
     padding-right: 15px;
 }
@@ -44,6 +51,12 @@ main {
 
 .google-input {
     padding: 20px;
+    max-height: 160px;
+    width: auto;
+    max-width: 584px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 6px;
 }
 
 .google-search {
@@ -53,14 +66,15 @@ main {
     border-radius: 24px;
     height: 44px;
     margin: 0 auto;
-    width: 584px;
+    width: auto;
+    max-width: 584px;
 }
 
 .google-search-image {
     margin: auto 15px;
-    color: #9aa0a6;
     height: 20px;
     width: 20px;
+    opacity: 0.5;
 }
 
 .google-search:hover {
@@ -69,21 +83,29 @@ main {
 
 input {
     background-color: transparent;
-    width: 500px;
+    width: 584px;
     border: none;
 }
 
 .google-image {
-    height: 92px;
-    position: relative;
+    min-height: 92px;
+    max-height: 290px;
+    height: calc(100% - 560px);
 }
 
-.google-image img {
+.google-image-img {
+    max-height: 92px;
+    position: relative;
+    height: 100%;
+    margin-top: auto;
+}
+
+.google-image-img img {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
     object-position: center bottom;
-    width: auto
+    width: auto;
 }
 
 button {
@@ -107,6 +129,7 @@ button {
 .google-offer {
     font-size: small;
     margin-bottom: 24px;
+    flex-grow: 1;
 }
 
 .google-offer a {
